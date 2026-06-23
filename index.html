@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <title>INDEX TRAUB Brasil — Tornos CNC de Precisão Alemã</title>
+
+    <style>
+       
+
+        :root {
+            --red: #008BA2;
+            --teal: #008BA2;
+            --dark: #51555C;
+            --darkbg: #52565D;
+            --mid: #333333;
+            --gray: #6b6b6b;
+            --light: #f5f5f5;
+            --silver: #DBDDDE;
+            --white: #ffffff;
+            --font: 'Roboto Condensed', Arial, sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             font-family: "Roboto Condensed", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--white);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ── */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 300;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-top {
+            height: 6px;
+            background: var(--teal);
+            width: 100%;
+        }
+
+        .header-main {
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+        }
+
+        .header-logo img {
+            height: 36px;
+            display: block;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--red);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            
+            transition: background 0.2s;
+            text-transform: uppercase;
+        }
+
+        .header-cta:hover {
+            background: #005f72;
+        }
+
+        .header-cta svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+        
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding-top: 90px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(
+  to bottom,
+  #ababab 0%,
+  #d5d5d5 35%,
+  #eaeaea 70%,
+  #f5f5f5 100%
+);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 139, 162, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            padding: 60px 40px 60px 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--teal);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            
+            margin-bottom: 24px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--teal);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 3.8vw, 58px);
+            font-weight: 500;
+            line-height: 1.05;
+            color: #333333;
+            
+            margin-bottom: 24px;
+        }
+
+        .hero h1 em {
+            color: var(--teal);
+            font-style: normal;
+        }
+
+        .hero h1 strong {
+            color: var(--red);
+        }
+
+        .hero-sub {
+            font-size: 16px;
+        
+            line-height: 1.7;
+            max-width: 480px;
+            margin-bottom: 36px;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 40px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 32px;
+          
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero-stat span {
+            font-size: 14px;
+            color: #888;
+            letter-spacing: 1px;
+            
+            margin-top: 4px;
+            display: block;
+        }
+
+        .hero-cta-wrap {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: #005f72;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--white);
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        .hero-visual {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+            align-self: stretch;
+
+            /* background: linear-gradient(180deg, #EAEAEA 0%, #EAEAEA 40%, #EAEAEA 100%); */
+
+            overflow: hidden;
+        }
+
+        .hero-visual-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-slider {
+            position: relative;
+
+            width: 100%;
+            height: 600px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-slide {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity .8s ease;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hero-slide img {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+
+            object-fit: contain;
+        }
+
+        .hero-bullets {
+            position: absolute;
+
+            left: 50%;
+            bottom: 25px;
+
+            transform: translateX(-50%);
+
+            display: flex;
+            gap: 10px;
+
+            z-index: 20;
+        }
+
+        .hero-bullet {
+            width: 12px;
+            height: 12px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: rgba(0, 0, 0, .25);
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .hero-bullet.active {
+            background: #008BA2;
+            transform: scale(1.15);
+        }
+
+        @media(max-width:768px) {
+
+            .hero-slider {
+                height: 400px;
+            }
+
+            .hero-slide img {
+                width: 80%;
+            }
+
+        }
+
+        .hero-machine {
+            width: 90%;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 20px 60px #EAEAEA);
+        }
+
+        .hero-tagline {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.2);
+            
+        }
+
+        /* ── CREDIBILITY STRIP ── */
+        .credstrip {
+            background: var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        .credstrip-item {
+            flex: 1;
+            text-align: center;
+            padding: 20px 24px;
+            border-right: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .credstrip-item:last-child {
+            border-right: none;
+        }
+
+        .credstrip-item strong {
+            display: block;
+            font-size: 24px;
+          
+            color: var(--white);
+        }
+
+        .credstrip-item span {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 1px;
+            
+        }
+
+        /* ── SECTION BASE ── */
+        .section {
+            padding: 80px 60px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            
+            color: var(--teal);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--teal);
+        }
+
+        .section-title {
+            font-size: clamp(26px, 3vw, 42px);
+          
+            
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .section-title em {
+            color: var(--teal);
+            font-style: normal;
+        }
+
+        .section-desc {
+            font-size: 16px;
+            color: var(--gray);
+            line-height: 1.7;
+            max-width: 800px;
+            margin-bottom: 48px;
+        }
+
+        .section-divider {
+            width: 48px;
+            height: 3px;
+            background: var(--red);
+            margin: 20px 0 48px;
+        }
+
+        /* ── PORTFOLIO GRID ── */
+        .portfolio-bg {
+            background: var(--light);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+        }
+
+        .product-card {
+            background: var(--white);
+            padding: 28px 24px;
+            border-top: 3px solid transparent;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            cursor: default;
+        }
+
+        .product-card:hover {
+            border-top-color: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light);
+        }
+
+        .product-card-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--teal);
+        }
+
+        .product-card h3 {
+            font-size: 17px;
+            font-weight: 800;
+            
+            color: var(--dark);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .product-card p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .product-card-tag {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 3px 8px;
+        }
+
+        /* ── SECTORS ── */
+        .sectors {
+            background:linear-gradient(
+  to bottom,
+  #ababab 0%,
+  #d5d5d5 35%,
+  #eaeaea 70%,
+  #f5f5f5 100%
+);
+        }
+
+        .sectors .section-title {
+            color: #333333;
+        }
+
+        .sectors .section-desc {
+                 color: #333333;
+        }
+
+        .sectors .section-label {
+            color: var(--teal);
+        }
+
+        .sectors-grid {
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
+        }
+
+        .sector-item {
+            flex: 1;
+            min-width: 160px;
+            background: #fff;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .sector-item:hover {
+            border-bottom-color: var(--red);
+        }
+
+        .sector-icon {
+            width: 36px;
+            height: 36px;
+            margin-bottom: 16px;
+            background: rgba(0, 139, 162, 0.1);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sector-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--teal);
+        }
+
+        .sector-item h4 {
+            font-size: 13px;
+            font-weight: 800;
+            
+            color: #008fa1;
+            margin-bottom: 6px;
+        }
+
+        .sector-item p {
+            font-size: 15px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        /* ── DIFERENCIAIS ── */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .diferencial-card {
+            padding: 32px 28px;
+            border: 1px solid var(--silver);
+            position: relative;
+        }
+
+        .diferencial-num {
+            font-size: 48px;
+          
+            color: var(--silver);
+            line-height: 1;
+            margin-bottom: 12px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .diferencial-card h3 {
+            font-size: 17px;
+            font-weight: 500;
+            
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .diferencial-card p {
+            font-size: 16px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .diferencial-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 40px;
+            background: var(--teal);
+        }
+
+        /* ── TECH STRIP ── */
+        .tech-strip {
+            background: var(--teal);
+            padding: 40px 60px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tech-strip-title {
+            font-size: 20px;
+          
+            
+            color: var(--white);
+            min-width: 200px;
+            flex-shrink: 0;
+        }
+
+        .tech-strip-items {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .tech-chip {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ── FORM SECTION ── */
+        .form-section {
+            background: var(--light);
+        }
+
+        .form-inner {
+            display: grid;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .form-copy h2 {
+            font-size: clamp(24px, 2.8vw, 40px);
+          
+            
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .form-copy h2 em {
+            color: var(--red);
+            font-style: normal;
+        }
+
+        .form-copy p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .form-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-bullets li {
+            font-size: 14px;
+            color: var(--mid);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .form-bullets li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--teal);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .form-box {
+            background: var(--white);
+            padding: 40px;
+            border-top: 4px solid var(--red);
+        }
+
+        .form-box h3 {
+            font-size: 18px;
+            font-weight: 800;
+            
+            color: var(--dark);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--silver);
+            background: var(--white);
+            font-family: var(--font);
+            font-size: 14px;
+            color: var(--dark);
+            outline: none;
+            transition: border-color 0.2s;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--teal);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            font-family: var(--font);
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            background: #005f72;
+        }
+
+        .form-note {
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 12px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            height: 28px;
+            filter: brightness(0) invert(1) opacity(0.7);
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .footer-info a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .footer-tagline {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .diferenciais-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-visual {
+                min-height: 300px;
+            }
+
+            .hero-content {
+                padding: 40px 24px 32px;
+            }
+
+            .hero-machine {
+                max-width: 320px;
+            }
+
+            .section {
+                padding: 60px 24px;
+            }
+
+            .credstrip {
+                flex-wrap: wrap;
+            }
+
+            .credstrip-item {
+                flex-basis: 50%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            .form-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .tech-strip {
+                padding: 32px 24px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 32px 24px;
+            }
+
+            .header-main {
+                padding: 12px 20px;
+            }
+
+            .header-cta {
+                font-size: 11px;
+                padding: 10px 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sectors-grid {
+                flex-direction: column;
+            }
+
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .hero-cta-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header>
+        <div class="header-top"></div>
+        <div class="header-main">
+            <div class="header-logo">
+                <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-ms12/logo-index.svg"
+                    alt="INDEX TRAUB Brasil">
+            </div>
+            <a href="#formulario" class="header-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path
+                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.02z" />
+                </svg>
+                Fale com um especialista
+            </a>
+        </div>
+    </header>
+
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Engenharia alemã · 57 anos no Brasil</div>
+            <h1>
+
+                Tornos CNC de <em>precisão alemã</em> para aumentar eficiência operacional e acelerar ao máximo o
+                <em>retorno do investimento</em>
+
+            </h1>
+            <p class="hero-sub">
+                Máquinas com alta capacidade de repetibilidade para minimizar paradas não planejadas, retrabalho e
+                variação dimensional, aumentando a eficiência global dos equipamentos (OEE), reduzindo o custo por peça
+                e garantindo retorno sustentado pelo custo total de propriedade (TCO) </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>112</strong>
+                    <span>anos de inovação global</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>57</strong>
+                    <span>anos no Brasil</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>+30</strong>
+                    <span>Países</span>
+                </div>
+            </div>
+            <div class="hero-cta-wrap">
+                <a href="#formulario" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    Solicite uma consultoria técnica
+                </a>
+
+            </div>
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="hero-visual-bg"></div>
+
+            <div class="hero-slider">
+
+                <div class="hero-slide active">
+                    <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/img0.webp"
+                        alt="Torno CNC INDEX TRAUB">
+                </div>
+
+                <div class="hero-slide">
+                    <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/img1.webp"
+                        alt="Torno CNC INDEX TRAUB">
+                </div>
+
+                <div class="hero-slide">
+                    <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/img2.webp"
+                        alt="Torno CNC INDEX TRAUB">
+                </div>
+
+                <div class="hero-slide">
+                    <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/img3.webp"
+                        alt="Torno CNC INDEX TRAUB">
+                </div>
+
+                <div class="hero-slide">
+                    <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/img4.webp"
+                        alt="Torno CNC INDEX TRAUB">
+                </div>
+
+                <div class="hero-bullets">
+                    <button class="hero-bullet active"></button>
+                    <button class="hero-bullet"></button>
+                    <button class="hero-bullet"></button>
+                    <button class="hero-bullet"></button>
+                    <button class="hero-bullet"></button>
+                </div>
+
+            </div>
+
+        </div>
+       
+
+    </section>
+
+    <!-- ══ CREDIBILITY STRIP ══ -->
+    <div class="credstrip">
+        <div class="credstrip-item">
+            <strong>INDEX</strong>
+            <span>Fabricante alemã de referência</span>
+        </div>
+        <div class="credstrip-item">
+            <strong>TRAUB</strong>
+            <span>Duas marcas, uma missão</span>
+        </div>
+        <div class="credstrip-item">
+            <strong>Sorocaba/SP</strong>
+            <span>Fábrica + Showroom + suporte técnico</span>
+        </div>
+        <div class="credstrip-item">
+            <strong>LATAM</strong>
+            <span>Cobertura para toda América Latina</span>
+        </div>
+        <div class="credstrip-item">
+            <strong>iXservices</strong>
+            <span>Pós-venda com peças e treinamento</span>
+        </div>
+    </div>
+
+    <!-- ══ PORTFÓLIO ══ -->
+    <section class="section portfolio-bg" id="portfolio">
+        <div class="section-label">Portfólio completo</div>
+        <h2 class="section-title">Linhas de produto <em>INDEX & TRAUB</em></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+            Da peça médica de alta precisão ao componente automotivo de grande volume, passando pelos setores
+            aeroespacial, agrícola, hidráulico, energético e de ferramentaria, cada linha foi desenvolvida para atender
+            às exigências específicas de sua aplicação, garantindo máxima precisão, produtividade, confiabilidade e
+            estabilidade de processo. </p>
+
+        <div class="portfolio-grid">
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="3" />
+                        <circle cx="12" cy="12" r="8" stroke-dasharray="3 3" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                    </svg>
+                </div>
+                <h3>Tornos Universais</h3>
+                <p>Rigidez máxima para peças pesadas com operação contínua 24/7. Indicados
+                    para agronegócio, mineração e engenharia mecânica.</p>
+                <span class="product-card-tag">INDEX B400 · B500 · TRAUB TNA400 · TNA500</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                        <path d="M7 8h10M7 12h6" />
+                    </svg>
+                </div>
+                <h3>Centros de Torneamento e Fresagem</h3>
+                <p>Usinagem completa em uma única operação, Turn-Mill. Plataforma de
+                    referência para aeroespacial, automotivo e e-mobility.</p>
+                <span class="product-card-tag">G200 · G220 · G300 · G400 · G500 · R200 · TNX200</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h3>Tornos Automáticos de Produção</h3>
+                <p>Alta cadência com consistência absoluta para conectores, componentes
+                    médicos e peças automotivas em série.</p>
+                <span class="product-card-tag">INDEX C100 · C200 · ABC</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </div>
+                <h3>Tornos de Cabeçote Móvel</h3>
+                <p>Precisão extrema para peças pequenas de titânio, aço inox e materiais de
+                    difícil usinagem. Essenciais para implantes e odontologia.</p>
+                <span class="product-card-tag">TRAUB TNL12 · TNL20</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 12h8M12 8v8" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <h3>Tornos Multi-Fusos Automáticos</h3>
+                <p>Multiplicação de produtividade por projeto, até 8 fusos operando
+                    simultaneamente. Para volumes massivo sem abrir mão da precisão.</p>
+                <span class="product-card-tag">MS16-6 · MS24-6 · MS32-6 · MS40-6 · MS40-8 · MS52-6</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path
+                            d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                    </svg>
+                </div>
+                <h3>Porta-Ferramentas</h3>
+                <p>Portfólio completo de soluções de fixação de ferramentas para todos os modelos e segmentos atendidos
+                    pela INDEX.</p>
+                <span class="product-card-tag">Portfólio completo · Todos os segmentos</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+                        <line x1="12" y1="12" x2="12" y2="16" />
+                        <line x1="10" y1="14" x2="14" y2="14" />
+                    </svg>
+                </div>
+                <h3>Soluções de Automação Inteligentes</h3>
+                <p>Carregadores de barras, robótica integrada iXcenter e automação customizada para células de produção
+                    autônomas.</p>
+                <span class="product-card-tag">iXcenter · Carregador de barras · Células integradas</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                        <path d="M7 10h2v4H7zM11 8h2v6h-2zM15 11h2v3h-2z" />
+                    </svg>
+                </div>
+                <h3>Comandos e Softwares</h3>
+                <p>iXpanel tela touch 18.5" com iX4.0 ready, software de simulação e pacotes tecnológicos para
+                    digitalização completa da produção.</p>
+                <span class="product-card-tag">iXpanel · iXworld · iX4.0 · Tech Packages</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══ SETORES ══ -->
+    <section class="section sectors" id="setores">
+        <div class="section-label">Aplicações industriais</div>
+        <h2 class="section-title">Setores que a <em>INDEX</em> atende</h2>
+        <div class="section-divider" style="background: var(--teal)"></div>
+        <p class="section-desc">
+            Tecnologia alemã projetada para as exigências de cada setor, da tolerância crítica nos mais variados
+            materiais e segmentos à produção massiva de componentes. </p>
+        <div class="sectors-grid">
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 2L2 19h20L12 2z" />
+                        <path d="M12 8v6M12 16v.01" />
+                    </svg>
+                </div>
+                <h4>Aeroespacial & Defesa</h4>
+                <p>Titânio, Inconel e materiais exóticos com tolerâncias críticas. ChipMaster e Mineral Cast.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                    </svg>
+                </div>
+                <h4>Tecnologia Médica</h4>
+                <p>Implantes, próteses e instrumentos cirúrgicos. Whirling e retificação integrada.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="1" y="3" width="15" height="13" rx="2" />
+                        <path d="M16 8h4l3 3v5h-7V8z" />
+                        <circle cx="5.5" cy="18.5" r="2.5" />
+                        <circle cx="18.5" cy="18.5" r="2.5" />
+                    </svg>
+                </div>
+                <h4>Automotivo & E-Mobility</h4>
+                <p>Eixos, direção e componentes elétricos de alta performance. Power Skiving em setup único.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                </div>
+                <h4>Agronegócio & Energia</h4>
+                <p>Peças pesadas e transmissões para máquinas agrícolas. Tornos universais com operação 24/7.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="10" />
+                        <path
+                            d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+                    </svg>
+                </div>
+                <h4>Óleo & Gás</h4>
+                <p>Peças de alta complexidade em materiais exóticos para equipamentos de exploração e refino.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path
+                            d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                    </svg>
+                </div>
+                <h4>Engenharia de Precisão</h4>
+                <p>Job shops de alta complexidade com geometrias avançadas e materiais de difícil usinagem.</p>
+            </div>
+
+            <div class="sector-item">
+                <div class="sector-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h4>Hidráulica & Pneumática</h4>
+                <p>Componentes de alta pressão com exigências severas de vedação e repetibilidade dimensional.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══ TECH STRIP ══ -->
+    <div class="tech-strip">
+        <div class="tech-strip-title">Tecnologias exclusivas INDEX</div>
+        <div class="tech-strip-items">
+            <span class="tech-chip">ChipMaster</span>
+            <span class="tech-chip">CenterMaster</span>
+            <span class="tech-chip">ClampMaster</span>
+            <span class="tech-chip">Mineral Cast</span>
+            <span class="tech-chip">Power Skiving</span>
+            <span class="tech-chip">Whirling</span>
+            <span class="tech-chip">Grinding Integrado</span>
+            <span class="tech-chip">iXpanel i4.0</span>
+            <span class="tech-chip">XValuation</span>
+        </div>
+    </div>
+
+    <!-- ══ DIFERENCIAIS ══ -->
+    <section class="section" id="diferenciais">
+        <div class="section-label">Por que escolher a INDEX</div>
+        <h2 class="section-title">Diferenciais técnicos <em>e competitivos</em></h2>
+        <div class="section-divider"></div>
+        <div class="diferenciais-grid">
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">01</div>
+                <h3>Precisão e repetibilidade alemã</h3>
+                <p>Tolerâncias extremas com estabilidade de processo nos mais diversos materiais. Engenharia construída
+                    para dar segurança em qualquer aplicação.</p>
+            </div>
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">02</div>
+                <h3>Durabilidade superior de máquinas</h3>
+                <p>Base em Mineral Cast com amortecimento de vibrações 10x superior ao ferro fundido. Estabilidade
+                    térmica para atender todas as fábricas ao redor do mundo. Máquinas que duram décadas.</p>
+            </div>
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">03</div>
+                <h3>Engenharia alemã com suporte no Brasil</h3>
+                <p>57 anos de operação direta em Sorocaba/SP com fábrica, showroom, laboratório e equipe técnica local.
+                    Cobertura para toda a América Latina, sem depender de suporte no exterior.</p>
+            </div>
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">04</div>
+                <h3>Flexibilidade de configuração</h3>
+                <p>Arquitetura modular que permite adaptar a máquina à peça, não o contrário. Cada
+                    configuração é calibrada para o processo específico do cliente com máxima eficiência de custo.</p>
+            </div>
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">05</div>
+                <h3>ROI comprovado — XValuation</h3>
+                <p>Programa estruturado de análise de retorno: custo por peça, payback, TCO e VPL. A INDEX não é
+                    comparada por preço de catálogo, é avaliada pelo lucro que gera em 5 a 10 anos.</p>
+            </div>
+
+            <div class="diferencial-card">
+                <div class="diferencial-accent"></div>
+                <div class="diferencial-num">06</div>
+                <h3>Ecossistema pós-venda iXservices</h3>
+                <p>Peças de reposição originais, manutenção corretiva/preventiva/preditiva, retrofit, treinamento de
+                    operadores/programadores/manutentores e upgrades de software. Suporte total que acompanha toda a
+                    vida útil da máquina.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const slides = document.querySelectorAll('.hero-slide');
+            const bullets = document.querySelectorAll('.hero-bullet');
+
+            let current = 0;
+
+            function showSlide(index) {
+
+                slides.forEach(slide => slide.classList.remove('active'));
+                bullets.forEach(bullet => bullet.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                bullets[index].classList.add('active');
+
+                current = index;
+            }
+
+            bullets.forEach((bullet, index) => {
+
+                bullet.addEventListener('click', () => {
+
+                    showSlide(index);
+
+                });
+
+            });
+
+            setInterval(() => {
+
+                let next = current + 1;
+
+                if (next >= slides.length) {
+                    next = 0;
+                }
+
+                showSlide(next);
+
+            }, 3000);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
