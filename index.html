@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
     <title>INDEX TRAUB Brasil — Tornos CNC de Precisão Alemã</title>
 
     <style>
-       
-
         :root {
-            --red: #008BA2;
-            --teal: #008BA2;
+            --red: #008AA2;
+            --teal: #008AA2;
             --dark: #51555C;
             --darkbg: #52565D;
             --mid: #333333;
@@ -30,7 +30,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-             font-family: "Roboto Condensed", sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
         }
 
         html {
@@ -81,10 +81,10 @@
             color: var(--white);
             padding: 12px 24px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight:600;
             font-size: 13px;
             letter-spacing: 0.5px;
-            
+
             transition: background 0.2s;
             text-transform: uppercase;
         }
@@ -102,20 +102,17 @@
         /* ── HERO ── */
         .hero {
             min-height: 100vh;
-        
+
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             padding-top: 90px;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(
-  to bottom,
-  #ababab 0%,
-  #d5d5d5 35%,
-  #eaeaea 70%,
-  #f5f5f5 100%
-);
+            background: linear-gradient(to bottom,
+                    #CACCCC 0%,
+                 
+                    #f5f5f5 100%);
         }
 
         .hero::before {
@@ -140,7 +137,7 @@
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 2px;
-            
+
             margin-bottom: 24px;
         }
 
@@ -156,7 +153,7 @@
             font-weight: 500;
             line-height: 1.05;
             color: #333333;
-            
+
             margin-bottom: 24px;
         }
 
@@ -171,7 +168,7 @@
 
         .hero-sub {
             font-size: 16px;
-        
+
             line-height: 1.7;
             max-width: 480px;
             margin-bottom: 36px;
@@ -194,8 +191,8 @@
         .hero-stat strong {
             display: block;
             font-size: 32px;
-          
-            color: var(--white);
+
+            color: #005f72;
             line-height: 1;
         }
 
@@ -203,7 +200,7 @@
             font-size: 14px;
             color: #888;
             letter-spacing: 1px;
-            
+
             margin-top: 4px;
             display: block;
         }
@@ -221,10 +218,10 @@
             color: var(--white);
             padding: 16px 32px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 14px;
             letter-spacing: 0.5px;
-            
+
             transition: background 0.2s;
             display: inline-flex;
             align-items: center;
@@ -243,7 +240,7 @@
             font-weight: 600;
             font-size: 14px;
             letter-spacing: 0.5px;
-            
+
             transition: all 0.2s;
         }
 
@@ -373,10 +370,10 @@
             bottom: 40px;
             right: 40px;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 3px;
             color: rgba(255, 255, 255, 0.2);
-            
+
         }
 
         /* ── CREDIBILITY STRIP ── */
@@ -403,7 +400,7 @@
         .credstrip-item strong {
             display: block;
             font-size: 24px;
-          
+
             color: var(--white);
         }
 
@@ -411,7 +408,7 @@
             font-size: 11px;
             color: rgba(255, 255, 255, 0.75);
             letter-spacing: 1px;
-            
+
         }
 
         /* ── SECTION BASE ── */
@@ -421,9 +418,9 @@
 
         .section-label {
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 3px;
-            
+
             color: var(--teal);
             margin-bottom: 12px;
             display: flex;
@@ -440,8 +437,8 @@
 
         .section-title {
             font-size: clamp(26px, 3vw, 42px);
-          
-            
+
+
             line-height: 1.1;
             margin-bottom: 16px;
             color: var(--dark);
@@ -470,6 +467,16 @@
         /* ── PORTFOLIO GRID ── */
         .portfolio-bg {
             background: var(--light);
+
+
+        }
+
+        .containerTextPortfolio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
         }
 
         .portfolio-grid {
@@ -510,8 +517,8 @@
 
         .product-card h3 {
             font-size: 17px;
-            font-weight: 800;
-            
+            font-weight: 600;
+
             color: var(--dark);
             margin-bottom: 8px;
             line-height: 1.3;
@@ -527,9 +534,9 @@
             display: inline-block;
             margin-top: 12px;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 1px;
-            
+
             color: var(--teal);
             border: 1px solid var(--teal);
             padding: 3px 8px;
@@ -537,13 +544,10 @@
 
         /* ── SECTORS ── */
         .sectors {
-            background:linear-gradient(
-  to bottom,
-  #ababab 0%,
-  #d5d5d5 35%,
-  #eaeaea 70%,
-  #f5f5f5 100%
-);
+            background: linear-gradient(to bottom,
+                    #CACCCC 0%,
+            
+                    #f5f5f5 100%);
         }
 
         .sectors .section-title {
@@ -551,7 +555,7 @@
         }
 
         .sectors .section-desc {
-                 color: #333333;
+            color: #333333;
         }
 
         .sectors .section-label {
@@ -598,9 +602,9 @@
 
         .sector-item h4 {
             font-size: 13px;
-            font-weight: 800;
-            
-            color: #008fa1;
+            font-weight: 600;
+
+            color: #666;
             margin-bottom: 6px;
         }
 
@@ -625,7 +629,7 @@
 
         .diferencial-num {
             font-size: 48px;
-          
+
             color: var(--silver);
             line-height: 1;
             margin-bottom: 12px;
@@ -635,7 +639,7 @@
         .diferencial-card h3 {
             font-size: 17px;
             font-weight: 500;
-            
+
             color: var(--dark);
             margin-bottom: 10px;
         }
@@ -667,8 +671,8 @@
 
         .tech-strip-title {
             font-size: 20px;
-          
-            
+
+
             color: var(--white);
             min-width: 200px;
             flex-shrink: 0;
@@ -682,20 +686,22 @@
         }
 
         .tech-chip {
-            background: rgba(255, 255, 255, 0.15);
+            /* background: rgba(255, 255, 255, 0.15); */
             color: var(--white);
             padding: 8px 16px;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            
+
             white-space: nowrap;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* border: 1px solid rgba(255, 255, 255, 0.2); */
         }
 
         /* ── FORM SECTION ── */
         .form-section {
-            background: var(--light);
+            background: linear-gradient(to bottom,
+                    #CACCCC 0%,
+                    #f5f5f5 100%);
         }
 
         .form-inner {
@@ -706,11 +712,12 @@
 
         .form-copy h2 {
             font-size: clamp(24px, 2.8vw, 40px);
-          
-            
+
+
             color: var(--dark);
             line-height: 1.1;
             margin-bottom: 20px;
+            font-weight: 500;
         }
 
         .form-copy h2 em {
@@ -760,7 +767,7 @@
         .form-box h3 {
             font-size: 18px;
             font-weight: 800;
-            
+
             color: var(--dark);
             margin-bottom: 24px;
         }
@@ -774,7 +781,7 @@
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 1px;
-            
+
             color: var(--gray);
             margin-bottom: 6px;
         }
@@ -822,7 +829,7 @@
             font-size: 15px;
             font-weight: 800;
             letter-spacing: 1px;
-            
+
             cursor: pointer;
             transition: background 0.2s;
             margin-top: 8px;
@@ -871,7 +878,7 @@
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 3px;
-            
+
             color: rgba(255, 255, 255, 0.2);
         }
 
@@ -1082,7 +1089,7 @@
             </div>
 
         </div>
-       
+
 
     </section>
 
@@ -1112,14 +1119,18 @@
 
     <!-- ══ PORTFÓLIO ══ -->
     <section class="section portfolio-bg" id="portfolio">
-        <div class="section-label">Portfólio completo</div>
-        <h2 class="section-title">Linhas de produto <em>INDEX & TRAUB</em></h2>
-        <div class="section-divider"></div>
-        <p class="section-desc">
-            Da peça médica de alta precisão ao componente automotivo de grande volume, passando pelos setores
-            aeroespacial, agrícola, hidráulico, energético e de ferramentaria, cada linha foi desenvolvida para atender
-            às exigências específicas de sua aplicação, garantindo máxima precisão, produtividade, confiabilidade e
-            estabilidade de processo. </p>
+        <div class="containerTextPortfolio">
+            <div class="section-label">Portfólio completo</div>
+            <h2 class="section-title">Linhas de produto <em>INDEX & TRAUB</em></h2>
+            <div class="section-divider"></div>
+            <p class="section-desc">
+                Da peça médica de alta precisão ao componente automotivo de grande volume, passando pelos setores
+                aeroespacial, agrícola, hidráulico, energético e de ferramentaria, cada linha foi desenvolvida para
+                atender
+                às exigências específicas de sua aplicação, garantindo máxima precisão, produtividade, confiabilidade e
+                estabilidade de processo. </p>
+        </div>
+
 
         <div class="portfolio-grid">
 
@@ -1407,7 +1418,43 @@
 
         </div>
     </section>
+    <!-- ══ FORMULÁRIO ══ -->
+    <section class="section form-section" id="formulario">
+        <div class="form-inner">
 
+            <div class="form-copy">
+                <div class="section-label">Consultoria técnica</div>
+                <h2>Fale com um <em>especialista</em> INDEX</h2>
+                <div class="section-divider"></div>
+                <p>
+                    Nossos engenheiros de aplicação analisam o seu processo e identificam qual linha de produto entrega
+                    o maior retorno para sua operação.
+                </p>
+                <ul class="form-bullets">
+                    <li>Análise gratuita do seu processo produtivo atual</li>
+                    <li>Comparativo de custo por peça vs. equipamento atual</li>
+                    <li>Demonstração no showroom de Sorocaba/SP</li>
+                    <li>Proposta técnica e financeira personalizada</li>
+                    <li>Condições de financiamento e locação disponíveis</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="footer-logo">
+            <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/logoFooterEsq.png"
+                alt="INDEX Brasil">
+        </div>
+        <div class="footer-info">
+        </div>
+        <img src="https://agencia-soulrocket.github.io/index-midias-lps/assets-tornos/logoFooterDir.png"
+            alt="logo Index">
+    </footer>
 
     <script>
 
