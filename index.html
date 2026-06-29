@@ -81,7 +81,7 @@
             color: var(--white);
             padding: 12px 24px;
             text-decoration: none;
-            font-weight:600;
+            font-weight: 600;
             font-size: 13px;
             letter-spacing: 0.5px;
 
@@ -111,7 +111,7 @@
             overflow: hidden;
             background: linear-gradient(to bottom,
                     #CACCCC 0%,
-                 
+
                     #f5f5f5 100%);
         }
 
@@ -546,7 +546,7 @@
         .sectors {
             background: linear-gradient(to bottom,
                     #CACCCC 0%,
-            
+
                     #f5f5f5 100%);
         }
 
@@ -984,6 +984,100 @@
                 justify-content: center;
             }
         }
+
+       .tech-strip {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: #0d94a8;
+    padding: 80px 40px;
+
+    overflow: hidden;
+}
+
+.tech-strip-title {
+    flex-shrink: 0;
+
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.tech-strip-slider {
+    flex: 1;
+    overflow: hidden;
+}
+
+.tech-strip-track {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    width: max-content;
+    white-space: nowrap;
+
+    animation: marquee 40s linear infinite;
+}
+
+.tech-chip {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tech-strip:hover .tech-strip-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .tech-strip {
+        gap: 20px;
+        padding: 18px 20px;
+    }
+
+    .tech-strip-title {
+        font-size: 24px;
+    }
+
+    .tech-chip {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tech-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .tech-strip-slider {
+        width: 100%;
+    }
+
+    .tech-strip-title {
+        font-size: 22px;
+    }
+
+    .tech-chip {
+        font-size: 15px;
+    }
+}
     </style>
 </head>
 
@@ -1020,7 +1114,7 @@
             <p class="hero-sub">
                 Máquinas com alta capacidade de repetibilidade para minimizar paradas não planejadas, retrabalho e
                 variação dimensional, aumentando a eficiência global dos equipamentos (OEE), reduzindo o custo por peça
-               e garantindo a maximização do retorno sobre o investimento (ROI). </p>
+                e garantindo a maximização do retorno sobre o investimento (ROI). </p>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <strong>112</strong>
@@ -1107,7 +1201,7 @@
             <strong>Sorocaba/SP</strong>
             <span>Fábrica + Showroom + suporte técnico</span>
         </div>
-              <div class="credstrip-item">
+        <div class="credstrip-item">
             <strong>ONE CLICK METAL</strong>
             <span>Impressão 3D metálica</span>
         </div>
@@ -1115,7 +1209,7 @@
             <strong>LATAM</strong>
             <span>Cobertura para toda América Latina</span>
         </div>
-  
+
     </div>
 
     <!-- ══ PORTFÓLIO ══ -->
@@ -1147,7 +1241,8 @@
                     </svg>
                 </div>
                 <h3>Tornos Universais</h3>
-                <p>Rigidez máxima com operação contínua 24/7. Indicados para ferramentarias, linhas de produção, agronegócio, mineração e automobilística.</p>
+                <p>Rigidez máxima com operação contínua 24/7. Indicados para ferramentarias, linhas de produção,
+                    agronegócio, mineração e automobilística.</p>
                 <span class="product-card-tag">INDEX B400 · B500 · TRAUB TNA400 · TNA500</span>
             </div>
 
@@ -1290,7 +1385,8 @@
                     </svg>
                 </div>
                 <h4>Automotivo & E-Mobility</h4>
-                <p>Eixos, flanges e componentes de alta performance. Diversas tecnologias para geração de engrenagens.</p>
+                <p>Eixos, flanges e componentes de alta performance. Diversas tecnologias para geração de engrenagens.
+                </p>
             </div>
 
             <div class="sector-item">
@@ -1343,19 +1439,24 @@
 
     <!-- ══ TECH STRIP ══ -->
     <div class="tech-strip">
-        <div class="tech-strip-title">Tecnologias exclusivas INDEX</div>
-        <div class="tech-strip-items">
-            <span class="tech-chip">ChipMaster</span>
-            <span class="tech-chip">CenterMaster</span>
-            <span class="tech-chip">ClampMaster</span>
-      <span class="tech-chip">High speed whirling </span>
-            <span class="tech-chip">Power Skiving</span>
-            <span class="tech-chip">Whirling</span>
-            <span class="tech-chip">Grinding Integrado</span>
-            <span class="tech-chip">iXpanel i4.0</span>
-            <span class="tech-chip">XValuation</span>
-             <span class="tech-chip">Retífica integrada </span>
-              <span class="tech-chip">Geração de engrenagens </span>
+        <div class="tech-strip-title">
+            Tecnologias exclusivas INDEX
+        </div>
+
+        <div class="tech-strip-slider">
+            <div class="tech-strip-track">
+                <span class="tech-chip">ChipMaster</span>
+                <span class="tech-chip">CenterMaster</span>
+                <span class="tech-chip">ClampMaster</span>
+                <span class="tech-chip">High Speed Whirling</span>
+                <span class="tech-chip">Power Skiving</span>
+                <span class="tech-chip">Whirling</span>
+                <span class="tech-chip">Grinding Integrado</span>
+                <span class="tech-chip">iXpanel i4.0</span>
+                <span class="tech-chip">XValuation</span>
+                <span class="tech-chip">Retífica integrada</span>
+                <span class="tech-chip">Geração de engrenagens</span>
+            </div>
         </div>
     </div>
 
@@ -1498,7 +1599,10 @@
             }, 3000);
 
         });
+const track = document.querySelector('.tech-strip-track');
 
+// duplica os itens para criar o loop infinito
+track.innerHTML += track.innerHTML;
     </script>
 
 </body>
